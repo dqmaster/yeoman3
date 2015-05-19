@@ -345,8 +345,34 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+     },
+   protractor_webdriver: {
+        your_target: {
+            options: {
+                path: 'node_modules/protractor/bin/',
+                command: 'webdriver-manager start'
+            }
+        }
+    },  
+	protractor: {
+        options: {
+              configFile: "protractor-config.js",
+              keepAlive: true, // If false, the grunt process stops when the test fails.
+              noColor: false, // If true, protractor will not use colors in its output.
+              args: {
+                  // Arguments passed to the command
+              }
+          },
+        chrome: {
+            options: {
+                  args: {
+                      browser: "chrome"
+                  }
+              }
+        }
     }
   });
+
 
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
@@ -360,7 +386,8 @@ module.exports = function (grunt) {
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
-      'watch'
+	  'protractor_webdriver',
+      'protractor'
     ]);
   });
 
