@@ -364,13 +364,7 @@ module.exports = function (grunt) {
 				  chromeDriver:'./node_modules/protractor/selenium/chromedriver'
               }
           },
-        chrome: {
-            options: {
-                  args: {
-                      browser: "chrome"
-                  }
-              }
-        }
+         run:{}
     }
   });
 
@@ -388,7 +382,7 @@ module.exports = function (grunt) {
       'autoprefixer',
       'connect:livereload',	 
       'protractor_webdriver',  
-      'protractor'
+      'protractor:run'
     ]);
   });
 
