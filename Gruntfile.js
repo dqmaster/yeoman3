@@ -385,8 +385,7 @@ module.exports = function (grunt) {
       'wiredep',
       'concurrent:server',
       'autoprefixer',
-      'connect:livereload',
-	  'protractor_webdriver',
+      'connect:livereload',	 
       'protractor'
     ]);
   });
