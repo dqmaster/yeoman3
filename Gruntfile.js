@@ -349,7 +349,7 @@ module.exports = function (grunt) {
    protractor_webdriver: {
         your_target: {
             options: {
-                path: 'node_modules/protractor/bin/',
+                path: './node_modules/protractor/bin/',
                 command: 'webdriver-manager start'
             }
         }
