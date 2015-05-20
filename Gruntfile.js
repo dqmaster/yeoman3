@@ -386,6 +386,7 @@ module.exports = function (grunt) {
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',	 
+      'protractor_webdriver',  
       'protractor'
     ]);
   });
@@ -425,4 +426,6 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+  grunt.loadNpmTasks('grunt-protractor-webdriver');
+  grunt.loadNpmTasks('grunt-protractor-runner');
 };
