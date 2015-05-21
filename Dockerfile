@@ -1,4 +1,4 @@
 #Build myapp server Docker container test
-FROM coreos/apache
+FROM nginx
 MAINTAINER David Ma
-COPY dist /var/www/
+COPY dist /usr/share/nginx/html/
