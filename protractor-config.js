@@ -6,8 +6,7 @@ exports.config = {
   specs: [
     'spec/*_spec.js'
   ],
-  chromeDriver: './node_modules/protractor/selenium/chromedriver', 
-  seleniumServerJar: './node_modules/protractor/selenium/selenium-server-standalone-2.45.0.jar',
+ 
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {'args': ['--disable-extensions']}
