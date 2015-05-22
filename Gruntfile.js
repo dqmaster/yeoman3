@@ -380,8 +380,7 @@ module.exports = function (grunt) {
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',	 
-      'protractor_webdriver',  
-      'protractor:run'
+      'protractor_webdriver'      
     ]);
   });
 
