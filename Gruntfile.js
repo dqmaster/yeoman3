@@ -392,9 +392,20 @@ module.exports = function (grunt) {
     'clean:server',
     'concurrent:test',
     'autoprefixer',
+    'connect:test',
+    'protractor'    
+  ]);
+  grunt.registerTask('mytest1', [
+    'clean:server',
+    'concurrent:test',
+    'autoprefixer'      
+  ]);
+  grunt.registerTask('mytest2', [
+    'clean:server',
+    'concurrent:test',
+    'autoprefixer',
     'connect:test'    
   ]);
-
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
