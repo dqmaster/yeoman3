@@ -392,8 +392,7 @@ module.exports = function (grunt) {
     'clean:server',
     'concurrent:test',
     'autoprefixer',
-    'connect:test',
-    'protractor'
+    'connect:test'    
   ]);
 
   grunt.registerTask('build', [
