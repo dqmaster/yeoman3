@@ -379,8 +379,7 @@ module.exports = function (grunt) {
       'wiredep',
       'concurrent:server',
       'autoprefixer',
-      'connect:livereload',	 
-      'watch'      
+      'connect:livereload'            
     ]);
   });
 
