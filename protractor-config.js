@@ -1,5 +1,5 @@
 exports.config = {
-  // The address of a running selenium server. aadsf
+  // The address of a running selenium server. aadsfsasf
   seleniumAddress: 'http://localhost:4444/wd/hub',
 
   // Spec patterns are relative to the location of this config.
