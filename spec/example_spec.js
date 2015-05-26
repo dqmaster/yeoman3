@@ -6,7 +6,7 @@ describe('Application Homepage', function() {
 
     var appName = element(by.css('h3.text-muted'));
 
-    expect(appName.getText()).toEqual('yeoman9783');
+    expect(appName.getText()).toEqual('yeoman3');
   });
 
 });
