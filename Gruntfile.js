@@ -393,6 +393,7 @@ module.exports = function (grunt) {
     'concurrent:test',
     'autoprefixer',
     'connect:test',
+	'protractor_webdriver',
     'protractor'    
   ]);
   grunt.registerTask('mytest1', [
