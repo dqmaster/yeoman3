@@ -14,6 +14,8 @@ deployment:
     branch: feature_protractor
     commands: 
       - git clone https://github.com/intercity/rails-docker-example.git
+      - rm -rf rails-docker-example/public/html  rails-docker-example/public/js rails-docker-example/public/styles
+      - cp -r app/view rails-docker-example/public/
       - docker login  -u dqmaster -e dqmaster@gmail.com -p abc123 tutum.co
       - docker info
       - docker build -t tutum.co/dqmaster/railssample rails-docker-example
