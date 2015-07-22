@@ -1,6 +1,13 @@
-machine:
-  services:
+machine: 
+  services: 
     - docker
+ 
+dependencies: 
+  override: 
+    - npm install
+    - npm install grunt-protractor-webdriver
+    - npm install grunt-protractor-runner
+    - bower install
 
 deployment: 
   hub: 
