@@ -13,7 +13,8 @@ deployment:
   hub: 
     branch: feature_protractor
     commands: 
+      - git clone https://github.com/intercity/rails-docker-example.git
       - docker login  -u dqmaster -e dqmaster@gmail.com -p abc123 tutum.co
       - docker info
-      - docker build -t tutum.co/dqmaster/yeoman3 .
-      - docker push tutum.co/dqmaster/yeoman3
+      - docker build -t tutum.co/dqmaster/railssample rails-docker-example
+      - docker push tutum.co/dqmaster/railssample
