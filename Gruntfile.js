@@ -368,10 +368,7 @@ module.exports = function (grunt) {
   });
 
 
-  
-  
-
-  grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
+    grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
@@ -385,7 +382,30 @@ module.exports = function (grunt) {
     ]);
   });
 
+  grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {
+    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
+    grunt.task.run(['serve:' + target]);
+  });
+
   grunt.registerTask('test', [
+    'clean:server',
+    'concurrent:test',
+    'autoprefixer',
+    'connect:test',
+    'protractor'    
+  ]);
+  grunt.registerTask('mytest1', [
+    'clean:server',
+    'concurrent:test',
+    'autoprefixer'      
+  ]);
+  grunt.registerTask('mytest2', [
+    'clean:server',
+    'concurrent:test',
+    'autoprefixer',
+    'connect:test'    
+  ]);
+  grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
     'useminPrepare',
@@ -401,11 +421,6 @@ module.exports = function (grunt) {
     'usemin',
     'htmlmin'
   ]);
-  
-  grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {
-    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-    grunt.task.run(['serve:' + target]);
-  });
 
   grunt.registerTask('default', [
     'newer:jshint',

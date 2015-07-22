@@ -9,6 +9,10 @@ dependencies:
     - npm install grunt-protractor-runner
     - bower install
 
+test:
+  override:
+    - grunt build
+	
 deployment: 
   hub: 
     branch: feature_protractor
