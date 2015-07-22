@@ -1,0 +1,12 @@
+machine:
+  services:
+    - docker
+
+deployment: 
+  hub: 
+    branch: feature_protractor
+    commands: 
+      - docker login  -u dqmaster -e dqmaster@gmail.com -p abc123 tutum.co
+      - docker info
+      - docker build -t tutum.co/dqmaster/yeoman3 .
+      - docker push tutum.co/dqmaster/yeoman3
