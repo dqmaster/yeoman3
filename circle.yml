@@ -12,7 +12,7 @@ dependencies:
 test:
   override:
     - grunt build
-	
+    
 deployment: 
   hub: 
     branch: feature_protractor
